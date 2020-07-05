@@ -1,9 +1,8 @@
 class Converter
   def solve(str)
-    return {r: 0, g: 0, b: 16} if str == "000010"
-    red = str[0,2]
-    green = str[2,2]
-    blue = str[4,2]
-    {r: red[1].to_i, g: green[1].to_i, b: blue[1].to_i}
+    red = str[1].to_i + str[0].to_i*16
+    green = str[3].to_i + str[2].to_i*16
+    blue = str[5].to_i + str[4].to_i*16
+    {r: red, g: green, b: blue}
   end
 end
