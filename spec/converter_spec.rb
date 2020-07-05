@@ -29,6 +29,10 @@ describe 'converter' do
     it('should return r:0 g:0 b:32') do
       expect(converter.solve("000020")).to eq({r: 0, g: 0, b: 32})
     end
+
+    it('should return r:0 g:0 b:33') do
+      expect(converter.solve("000021")).to eq({r: 0, g: 0, b: 33})
+    end
   end
 
 end
