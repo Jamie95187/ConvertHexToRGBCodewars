@@ -20,7 +20,8 @@ class Converter
   }
 
   def solve(str)
-    red = HEXGRAPH[str[1]] + HEXGRAPH[str[0]]*16
+    str.upcase!
+    red = HEXGRAPH[str[1].upcase] + HEXGRAPH[str[0]]*16
     green = HEXGRAPH[str[3]] + HEXGRAPH[str[2]]*16
     blue = HEXGRAPH[str[5]] + HEXGRAPH[str[4]]*16
     {r: red, g: green, b: blue}
